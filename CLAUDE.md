@@ -155,7 +155,7 @@ the bench workspace: it drives the flight controllers over USB (`tools/bf_cli.py
   translate it.
 - Names differ between the two: the bench says `AIR65 F` / `AIR75 F`, the site says `Air65`
   and files the AIR75 F logs under `Crafty` (same board UID `…303938`).
-- Log pages use `weight` to sort newest-first; adding one means renumbering the older ones.
+- Log pages use `weight` to sort newest-first; adding one means renumbering the older ones. Also add a row to the table in `content/log/_index.md`, which is hand-maintained.
 - Anything that is a pilot setting (rates, switches, crashflip) must match the bench's
   `content/reference/pilot-preferences.md`. When one changes there, mirror it in `/reference`.
 

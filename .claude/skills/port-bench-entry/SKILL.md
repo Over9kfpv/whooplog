@@ -67,7 +67,14 @@ renumbering: newest gets the lowest number, and every older log page shifts up b
   fact or omit it.
 - Per-craft settings stay per-craft. Never phrase one craft's setting as a recommendation.
 
-## 5. Verify and ship
+## 5. Update the log index
+
+`content/log/_index.md` holds a **hand-maintained table** of every log page. It does not
+generate itself, so a new page that is not added there is invisible on `/log/` even though
+it shows in the sidebar. Add a row (newest first) with date, linked title, craft, duration and
+a one-line verdict.
+
+## 6. Verify and ship
 
 ```bash
 hugo --gc --minify --cleanDestinationDir --printPathWarnings
