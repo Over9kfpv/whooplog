@@ -3,7 +3,7 @@ title: "Flight NNN — {{ replace .File.ContentBaseName "-" " " | title }}"
 description: ""
 lead: ""
 date: {{ .Date }}
-weight: 10
+weight: 1 # newest first: renumber older log pages up by one
 toc: true
 tags: []
 craft: []

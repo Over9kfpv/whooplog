@@ -1,6 +1,6 @@
 # whooplog
 
-A working reference for one 1S FPV tinywhoop — build spec, saved rates, blackbox extraction
+A working reference for two 1S FPV tinywhoops (Crafty and Air65) — build spec, saved rates, blackbox extraction
 and analysis workflow, and per-flight findings.
 
 **Live at <https://hansf.github.io/whooplog/>**
@@ -46,11 +46,17 @@ git submodule update --init --recursive
 
 ## Scope
 
-Everything here describes a single airframe: a BETAFPV G473 V2 1S whoop running a Betaflight
-2026.6.0-alpha build. Settings are recorded for reproducibility, not offered as
+Everything here describes two airframes, each a BETAFPV G473 V2 1S whoop running a Betaflight
+2026.6.0-alpha build. Every page names its craft in frontmatter. Settings are recorded for reproducibility, not offered as
 recommendations for other builds.
 
 Raw `.bbl` blackbox logs are not committed — see `CLAUDE.md` for that policy.
+
+## Relationship to the bench
+
+Content is written from the private `whoopshop` workspace, which talks to the flight
+controllers and holds raw logs. This repo publishes the analysis. See the *Bench and blog*
+section of `CLAUDE.md` and `.claude/skills/port-bench-entry/`.
 
 ## Sources
 

@@ -1,6 +1,6 @@
 # whooplog — working notes for Claude
 
-Hugo + Hextra documentation site about a 1S FPV tinywhoop. Deployed to GitHub Pages at
+Hugo + Hextra documentation site about two 1S FPV tinywhoops (Crafty and Air65). Deployed to GitHub Pages at
 `https://hansf.github.io/whooplog/`.
 
 ## Critical: the site lives on a subpath
@@ -141,8 +141,26 @@ settings into recommendations. Third-party reference material (Betaflight wiki m
 tuning transcripts bundled with the betaflight-mcp plugin) may be **cited and linked, never
 copied** into `content/`.
 
+## Bench and blog
+
+This repo is the **public site**. Its private counterpart is `/home/hans/Projects/whoopshop`,
+the bench workspace: it drives the flight controllers over USB (`tools/bf_cli.py`,
+`tools/bf_msp.py`, `tools/blackbox_tool.py`), keeps raw logs in `logs/` and config backups in
+`config/backups/`, and holds its own working journal in `content/log/`.
+
+- Flow is one way: **bench → site**. The bench is the source of truth for settings and raw data;
+  this site carries the analysis. Never edit the flight controller from here.
+- "Update the whooplog" means updating this repo. Use the `port-bench-entry` skill
+  (`.claude/skills/port-bench-entry/`) to find what the bench has that the site lacks and to
+  translate it.
+- Names differ between the two: the bench says `AIR65 F` / `AIR75 F`, the site says `Air65`
+  and files the AIR75 F logs under `Crafty` (same board UID `…303938`).
+- Log pages use `weight` to sort newest-first; adding one means renumbering the older ones.
+- Anything that is a pilot setting (rates, switches, crashflip) must match the bench's
+  `content/reference/pilot-preferences.md`. When one changes there, mirror it in `/reference`.
+
 ## Related
 
 `/home/hans/Projects/betamcp` is a scratch workspace holding upstream clones (betaflight,
 betaflight-configurator, betaflight-mcp, blackbox-log-viewer) and working log files. It is
-not a git repo and contains no code of ours — this site is the actual output.
+not a git repo and contains no code of ours.
