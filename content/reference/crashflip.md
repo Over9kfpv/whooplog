@@ -27,7 +27,7 @@ motors while you hold it. `crashflip_auto_rearm` only covers re-arming *after* y
 | Setting | Default | Here | What it does |
 | --- | --- | --- | --- |
 | `crashflip_rate` | 0 | **30** | Auto-stop threshold — **not** a speed. See below. |
-| `crashflip_auto_rearm` | OFF | **ON** | Re-arms once upright |
+| `crashflip_auto_rearm` | OFF | **OFF** | Re-arm by hand: switch crashflip off, then cycle arm. Was ON until 2026-09-13 |
 | `crashflip_motor_percent` | 0 | 0 | Power given to the opposing motor pair |
 
 Plus the two prerequisites: `motor_pwm_protocol = DSHOT300` and
