@@ -3,7 +3,7 @@ title: Crafty — Chasing a Temperature Warning to a New Board
 description: Clean logs, an inconclusive bench test, and a baseline taken with a fan on.
 lead: The fault was never isolated. A replacement board was ordered on 18 September.
 date: 2026-09-17
-weight: 4
+weight: 1
 toc: true
 tags: ["blackbox", "hardware", "telemetry", "vtx"]
 craft: ["Crafty"]

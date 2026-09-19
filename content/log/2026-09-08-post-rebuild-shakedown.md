@@ -3,7 +3,7 @@ title: Flight 006 — Post-Rebuild Shakedown
 description: Verifying a hot-iron rebuild. Airframe passed; two unrelated issues surfaced.
 lead: A 30-second hover to check whether the soldering held. It did.
 date: 2026-09-08
-weight: 10
+weight: 13
 toc: true
 tags: ["hardware-check", "rebuild"]
 craft: ["Crafty"]
