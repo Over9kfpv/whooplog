@@ -3,7 +3,7 @@
 A working reference for two 1S FPV tinywhoops (Crafty and Air65) — build spec, saved rates, blackbox extraction
 and analysis workflow, and per-flight findings.
 
-**Live at <https://hansf.github.io/whooplog/>**
+**Live at <https://over9kfpv.github.io/whooplog/>**
 
 Built with [Hugo](https://gohugo.io/) and the [Hextra](https://github.com/imfing/hextra)
 theme, deployed to GitHub Pages by GitHub Actions.
@@ -11,7 +11,7 @@ theme, deployed to GitHub Pages by GitHub Actions.
 ## Local development
 
 ```bash
-git clone --recurse-submodules git@github.com:HansF/whooplog.git
+git clone --recurse-submodules git@github.com:Over9kfpv/whooplog.git
 cd whooplog
 hugo server -D
 ```

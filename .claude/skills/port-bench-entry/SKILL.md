@@ -76,3 +76,10 @@ npm run check:paths
 
 Then commit only the files you wrote and push `main`; that deploys via GitHub Actions. Leave
 unrelated uncommitted files (for example an edited reference page) out of the commit and say so.
+
+## Automatic publishing
+
+The bench (`whoopshop/CLAUDE.md`) instructs Claude to run this procedure by itself whenever a
+new `content/log/` entry is written there or a shared pilot setting changes. No extra
+confirmation is needed for the push. Never publish raw `.bbl`/`.csv` files, config backups,
+or anything containing coordinates or credentials.

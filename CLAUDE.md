@@ -1,11 +1,11 @@
 # whooplog — working notes for Claude
 
 Hugo + Hextra documentation site about two 1S FPV tinywhoops (Crafty and Air65). Deployed to GitHub Pages at
-`https://hansf.github.io/whooplog/`.
+`https://over9kfpv.github.io/whooplog/`.
 
 ## Critical: the site lives on a subpath
 
-`baseURL` is `https://hansf.github.io/whooplog/` (trailing slash required). `hugo server`
+`baseURL` is `https://over9kfpv.github.io/whooplog/` (trailing slash required). `hugo server`
 preserves the path, so local dev runs at `http://localhost:1313/whooplog/`, not `/`. This is
 deliberate — it means subpath bugs surface locally.
 
