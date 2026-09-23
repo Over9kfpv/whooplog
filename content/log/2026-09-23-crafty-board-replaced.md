@@ -1,7 +1,7 @@
 ---
 title: Crafty — Replacement Board Restored and Recalibrated
 description: The new board took the 17 September backup cleanly; the carried-over accelerometer calibration did not, and was redone.
-lead: Same config, different physical board — so the level reference had to be taken again.
+lead: Same config, different physical board — recalibrated, baselined, ready to fly.
 date: 2026-09-23
 weight: 1
 toc: true
@@ -54,11 +54,25 @@ restoring an otherwise-known-good config.
 
 ## Bench temperature
 
-**37 °C on USB, no battery — with a fan on the board.** Not a clean baseline.
-[The last chase](/log/2026-09-17-crafty-temperature-warning/) is exactly why that caveat is
-recorded rather than left implicit: the old board's 39–41 °C figures were fan-assisted too, and
-that gap between fan and no-fan readings (up to 72 °C) is what sent the board away for
-replacement in the first place. The real, no-fan baseline this board needs is still open.
+A first reading, **37 °C on USB with a fan on the board**, was not a usable baseline — that is
+exactly the confound that sent the old board away in the first place. A no-fan reading followed
+it, tracked over time rather than as a single number, since the
+[previous investigation](/log/2026-09-17-crafty-temperature-warning/) found no-fan readings keep
+climbing for minutes before flattening:
+
+| Time | Core temperature |
+| --- | ---: |
+| 30 s | 42 °C |
+| 60 s | 49 °C |
+| 90 s | 54 °C |
+| 120 s | 57 °C |
+| 150 s | 63 °C |
+| 180 s | 64 °C |
+| 210 s | 65 °C |
+
+Levelling off around 63–65 °C at 3.5 minutes, USB only, no battery. That lands close to the
+Air65 control reading from the same investigation (36 → 60 °C at 3 minutes, still rising), and
+well under the old board's 70–72 °C plateau. This is the real baseline for the new board.
 
 ## Blade orientation
 
@@ -66,10 +80,12 @@ Same as the Air65: default `QUADX` mixer, no custom `mmix`, `yaw_motors_reversed
 craft. The restored config reproduces that, so prop rotation direction did not need to be
 touched on the new board.
 
-## Open before flying
+## Status
 
-- Confirm the motors are connected — the old board's last session left them unplugged for bench
-  testing.
-- Take one bench reading with **no fan** for a real thermal baseline.
-- Fly one hover pack and check for the propwash-era level drift noted in the
-  [13 September review](/log/2026-09-13-crafty-hover-and-crash-review/#in-the-hover-forward-stick-was-held-all-the-time).
+Motors confirmed connected. Config, blade orientation, calibration and a clean thermal baseline
+are all in place — the board is ready to fly.
+
+**Still open:** watch for the propwash-era level drift noted in the
+[13 September review](/log/2026-09-13-crafty-hover-and-crash-review/#in-the-hover-forward-stick-was-held-all-the-time)
+on the first hover pack, and confirm the core temperature stays near this baseline in flight
+rather than repeating the 09-17 warning.
