@@ -3,7 +3,7 @@ title: Crafty — Blackbox Review, Rougher After a Crash
 description: Vibration roughly tripled after one crash, with normal RPM per command, which points at props or a shaft.
 lead: The motors still produce normal output for their command. Something rotating is out of balance.
 date: 2026-09-13
-weight: 4
+weight: 5
 toc: true
 tags: ["blackbox", "hardware", "telemetry"]
 craft: ["Crafty"]

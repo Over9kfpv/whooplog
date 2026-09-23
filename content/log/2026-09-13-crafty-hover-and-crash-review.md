@@ -3,7 +3,7 @@ title: Crafty — Hover Pack, Crash Pack and the Odd Sound
 description: A once-per-revolution vibration on the front-left motor, matched between gyro and audio, and a level reference that drifts in the air.
 lead: The sound is motor 4, which was visibly tilted forward after the crash.
 date: 2026-09-13
-weight: 3
+weight: 4
 toc: true
 tags: ["blackbox", "hardware", "telemetry", "modes"]
 craft: ["Crafty"]

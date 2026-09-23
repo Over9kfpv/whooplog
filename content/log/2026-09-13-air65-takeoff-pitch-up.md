@@ -3,7 +3,7 @@ title: Air65 — The Nose-Up Takeoff, Traced to the Level Reference
 description: The accelerometer reference was off by 6.5° pitch for six arms and correct for the twenty-four before.
 lead: The craft tilted back as it left the ground. The airframe was fine; the level reference was not.
 date: 2026-09-13
-weight: 5
+weight: 6
 toc: true
 tags: ["blackbox", "tuning", "accelerometer", "safety"]
 craft: ["Air65"]
