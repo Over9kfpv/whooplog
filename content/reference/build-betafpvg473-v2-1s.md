@@ -50,22 +50,27 @@ No GPS, no magnetometer, no barometer detected. This matters in two places:
 
 ## Replacement board
 
-A replacement was ordered on 18 September after a temperature warning that was never isolated
-(see the [flight log entry](/log/2026-09-17-crafty-temperature-warning/)).
+This board was replaced on 23 September, after a temperature warning that three separate
+investigations never isolated (see the [flight log entry](/log/2026-09-17-crafty-temperature-warning/)).
+Everything under **Flight controller** above describes the airframe as it flew through
+17 September, on the board that's now retired.
 
-| Item | Value |
-| --- | --- |
-| Product | BETAFPV Matrix 5-in-1 V2 AIO, G473, 12 A, 1S |
-| Retailer's name for it | `Matrix 1S Brushless Flight Controller (5IN1 II)` at most other shops |
-| Status | On order; not yet on the bench |
+The replacement was ordered as a `BETAFPV Matrix 5-in-1 V2 AIO, G473, 12 A, 1S` — listed as
+`Matrix 1S Brushless Flight Controller (5IN1 II)` at most other retailers — and arrived on the
+same `BETAFPVG473_V2` target with a different gyro substitute:
 
-{{< callout type="warning" >}}
-Nothing above is verified against the hardware. The listing names a G473, but the reported target,
-the gyro and the connector layout are unconfirmed until the board is connected. BETAFPV
-substitutes gyros under the same target, so expect `ICM42622P` only if
-[the gyro notes](/reference/betafpv-gyro-firmware/) say it is still shipping. Everything under
-Flight controller above describes the **old** board until then.
-{{< /callout >}}
+| Item | Old board | New board |
+| --- | --- | --- |
+| MCU ID | *(retired, not recorded)* | `003400395346501620373142` |
+| Gyro / accelerometer | ICM42622P | **BMI270** |
+| Firmware | Betaflight 2026.6.0-alpha | Betaflight 2026.6.0-alpha (`e92c10887`) |
+
+The new board isn't a continuation of this one. It took its own share of setup faults — a dead
+motor, a battery reading that looked worse than it was, and a board-alignment value that was
+wrong in two different ways before it was right — and flies under its own name now:
+**[Phoenix](/craft/phoenix/)**. The full story is on
+[the blog](/blog/phoenix-rises-a-boards-hard-week/); its own settings and findings are tracked
+under [`craft: Phoenix`](/craft/phoenix/), not here.
 
 ## Known sensor issue
 
