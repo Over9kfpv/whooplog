@@ -1,7 +1,7 @@
 ---
 title: Crafty — First Hover on the Replacement Board, After Three Wrong Turns
 description: A dead motor, a battery reading that looked worse than it was, and a board-alignment value pulled from the wrong file — each one produced an identical, violent flip.
-lead: Stable in hand, then a clean hover, once the last of three stacked faults was found.
+lead: Stable in hand, then a clean hover, once the last of three stacked faults was found. Renamed Phoenix.
 date: 2026-09-24
 weight: 1
 toc: true
@@ -116,10 +116,48 @@ followed, logged clean:
 No excursions in any of the three. This is the first genuinely stable data from the replacement
 board.
 
+## Renamed: Phoenix
+
+`craft_name` read `AIR75 F` straight out of the loaded file — never `Crafty`. Rather than correct
+it back, the board got a name of its own: **Phoenix**. Same lineage as Crafty (the replacement for
+[the board that overheated](/log/2026-09-17-crafty-temperature-warning/)), but a fresh physical unit
+that earned a fresh name after flying on the fourth attempt to get it right.
+
+{{< callout type="info" >}}
+This log entry and the site's `craft` taxonomy still say **Crafty**, for continuity with the
+existing `/craft/crafty/` history. `craft_name` on the board itself says **Phoenix**. If the OSD name
+and the site tag drift apart in practice, worth revisiting.
+{{< /callout >}}
+
+## Brought in line with the fleet standard
+
+The loaded file covered the tune and the fix, but not [the pilot's own switch layout, throttle curve
+and crashflip settings](/reference/pilot-preferences/) — those were never part of it, and the earlier
+full defaults reset had wiped them. Checked against that reference page and corrected:
+
+| Setting | Was | Now |
+| --- | --- | --- |
+| `vcd_video_system` | `NTSC` | **`AUTO`** — a real bug, not a preference; NTSC is Air65-only |
+| `feature TELEMETRY` | off | on |
+| ARM range | `1700`–`2100` | `1800`–`2100` (deliberately narrow, matches the fleet) |
+| BEEPER channel | AUX4 (doubled with arm) | AUX1 |
+| CRASHFLIP channel | AUX3 | AUX5 |
+| OSD profile adjustment | unset | AUX3, adjustment 29 |
+| `crashflip_rate` | `0` (crashflip did nothing) | `30` |
+| `throttle_limit_percent` | `100` | `80` |
+| `thr_mid` / `thr_expo` / `thr_hover` | `50` / `0` / `50` | `40` / `35` / `44` |
+| `fpv_mix_degrees` | `0` | `10` |
+| `vtx_low_power_disarm` | `OFF` | `ON` |
+| `pilot_name` | unset | `HansF` |
+
+`crashflip_motor_percent = 0` and `crashflip_auto_rearm = OFF` were already correct — matching this
+site's own [crashflip notes](/reference/crashflip/), not an oversight.
+
 ## Final configuration
 
 | Setting | Value |
 | --- | --- |
+| `craft_name` | `Phoenix` |
 | `align_board_yaw` | `-135` |
 | `yaw_motors_reversed` | `ON` |
 | `mixer` | `QUADX` (stock — no custom `mmix`) |
@@ -127,7 +165,9 @@ board.
 | PID profile | `GF 1614`, tuned for `0802` motors (p/i/d/f 33/59/21/35 pitch, 33/60/21/35 roll) |
 | Rates | `roll_expo/pitch_expo/yaw_expo = 10/10/5`, `srate = 75/75/70` |
 | `acc_calibration` | `26,-2,3,1` |
-| ARM | AUX4, 1700–2100 (moved from the file's AUX1, matching this radio's wired switch) |
+| ARM | AUX4, `1800`–`2100` |
+| Crashflip | AUX5, `1700`–`2100`, `crashflip_rate = 30` |
+| Throttle | `throttle_limit_percent = 80`, `thr_mid/expo/hover = 40/35/44` |
 
 ## Open items
 
@@ -135,4 +175,3 @@ board.
 - The rate/expo values are noticeably gentler than Crafty's older `GF 1614` tune on the previous
   board (`srate 55`, `expo 35`) — this file's values are specific to the `0802` motors, not carried
   over. Worth flying more before touching them.
-- `craft_name` reads `AIR75 F` from the loaded file, not `Crafty`. Cosmetic, not yet corrected.
