@@ -69,19 +69,13 @@ enableGitInfo = true
   [menus.main.params]
     type = "search"
 
-[[menus.main]]
-  identifier = "theme-toggle"
-  weight = 99
-  [menus.main.params]
-    type = "theme-toggle"
-
 [params]
   displayUpdatedDate = true
   dateFormat = "2 January 2006"
 
   [params.theme]
-    default = "system"
-    displayToggle = true
+    default = "dark"
+    displayToggle = false
 
   [params.search]
     enable = true
