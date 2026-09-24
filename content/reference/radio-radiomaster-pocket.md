@@ -4,6 +4,7 @@ description: Handset, firmware, link, and what's on the SD card.
 lead: The transmitter side of the setup.
 weight: 7
 toc: true
+craft: ["Crafty", "Air65"]
 ---
 
 ## Handset
@@ -88,6 +89,44 @@ A tool's menu name comes from a marker in the script itself, not the filename:
 ```lua
 local toolName = "TNS|Betaflight setup|TNE"
 ```
+
+## Sounds
+
+`SOUNDS/en/` is the voice pack for the selected language. Flight-mode and telemetry callouts
+sit in that directory under names of **six characters or fewer** (`armed.wav`, `lowbat.wav`,
+`disarm.wav`). `SOUNDS/en/SYSTEM/` holds the fixed-name clips EdgeTX plays for its own
+events, plus the numbers and units it stitches together when speaking a telemetry value.
+
+Every clip is **16-bit signed PCM, mono, 16 kHz**. Stock alerts run roughly 0.6 to 1.5 s.
+
+These are the system alerts worth knowing, because their filenames are fixed by EdgeTX and
+are not obvious from the radio's menus:
+
+| File | Plays when |
+| --- | --- |
+| `SYSTEM/telemko.wav` | telemetry lost |
+| `SYSTEM/telemok.wav` | telemetry recovered |
+| `SYSTEM/thralert.wav` | throttle not at idle at power-on |
+| `SYSTEM/swalert.wav` | a switch is out of position at power-on |
+| `SYSTEM/hello.wav` | radio boot |
+| `SYSTEM/rxko.wav` | receiver signal lost |
+
+### Custom alerts
+
+Those four alert clips are replaced with Super Mario Bros. effects — pipe for telemetry lost,
+power-up for telemetry recovered, small jump for the throttle warning, super jump for the
+switch warning. A distinct, recognisable sound per event beats four variations on the same
+synthesised voice, particularly for telemetry loss, which needs to register while flying.
+
+Masters live in the workbench at `radio-scripts/SOUNDS/`, which mirrors the card's layout, and
+are copied over in Storage mode. `tools/mk_edgetx_sound.sh` does the conversion: it resamples
+to 16 kHz mono 16-bit, trims leading and trailing silence, normalises to −3 dBFS and warns
+above 2 s.
+
+{{< callout type="warning" >}}
+Keep alert clips under about a second. A warning that outlasts the event it describes stops
+being information, and the startup warnings repeat until you clear them.
+{{< /callout >}}
 
 ## Link
 

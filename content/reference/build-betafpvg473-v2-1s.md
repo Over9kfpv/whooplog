@@ -48,6 +48,25 @@ No GPS, no magnetometer, no barometer detected. This matters in two places:
   discuss openly. A GPS-equipped craft would need home-point coordinates scrubbed before
   any log left the machine.
 
+## Replacement board
+
+A replacement was ordered on 18 September after a temperature warning that was never isolated
+(see the [flight log entry](/log/2026-09-17-crafty-temperature-warning/)).
+
+| Item | Value |
+| --- | --- |
+| Product | BETAFPV Matrix 5-in-1 V2 AIO, G473, 12 A, 1S |
+| Retailer's name for it | `Matrix 1S Brushless Flight Controller (5IN1 II)` at most other shops |
+| Status | On order; not yet on the bench |
+
+{{< callout type="warning" >}}
+Nothing above is verified against the hardware. The listing names a G473, but the reported target,
+the gyro and the connector layout are unconfirmed until the board is connected. BETAFPV
+substitutes gyros under the same target, so expect `ICM42622P` only if
+[the gyro notes](/reference/betafpv-gyro-firmware/) say it is still shipping. Everything under
+Flight controller above describes the **old** board until then.
+{{< /callout >}}
+
 ## Known sensor issue
 
 The current sensor on this board reports implausible values — see the
