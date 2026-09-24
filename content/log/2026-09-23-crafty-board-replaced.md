@@ -3,7 +3,7 @@ title: Crafty — Replacement Board Restored and Recalibrated
 description: The new board took the 17 September backup cleanly; the carried-over accelerometer calibration did not, and was redone.
 lead: Same config, different physical board — recalibrated, baselined, ready to fly.
 date: 2026-09-23
-weight: 1
+weight: 2
 toc: true
 tags: ["hardware", "accelerometer", "osd"]
 craft: ["Crafty"]

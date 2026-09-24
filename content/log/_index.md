@@ -10,6 +10,7 @@ decoded log showed, and anything left open.
 
 | Date | Entry | Craft | Duration | Verdict |
 | --- | --- | --- | --- | --- |
+| 2026-09-24 | [First Hover on the Replacement Board, After Three Wrong Turns](2026-09-24-crafty-first-hover-after-replacement/) | Crafty | ~17 arms; final hover 9-17s x3 | Dead motor + battery red herring + wrong board-alignment; clean hover confirmed |
 | 2026-09-23 | [Replacement Board Restored and Recalibrated](2026-09-23-crafty-board-replaced/) | Crafty | Bench only | Restored, recalibrated, baselined at 63–65 °C no-fan — ready to fly |
 | 2026-09-17 | [Chasing a Temperature Warning to a New Board](2026-09-17-crafty-temperature-warning/) | Crafty | 9 logs, 4 packs + bench | Logs clean, fault never isolated; board replaced |
 | 2026-09-16 | [Overheating After a Crash, Not From Flying](2026-09-16-crafty-overheat-after-crash/) | Crafty | 9 logs, 2 packs | Motor 4 stalled at full command on ground re-arms |

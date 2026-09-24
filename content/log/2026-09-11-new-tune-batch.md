@@ -3,7 +3,7 @@ title: Flights 001–021 — First Batch on the New Tune
 description: The rates change confirmed, and evidence that the packs themselves are degrading.
 lead: The tune is fine. The batteries are not.
 date: 2026-09-11
-weight: 12
+weight: 13
 toc: true
 tags: ["battery", "tune-comparison", "batch"]
 craft: ["Crafty"]

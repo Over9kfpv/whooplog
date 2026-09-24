@@ -3,7 +3,7 @@ title: Crafty — Blackbox Review of an 18-Arm Session
 description: A healthy tune, a forward centre of gravity, and a decoder bug that made a good pack look sick.
 lead: Logged under the name AIR75 F, from the same board as Crafty.
 date: 2026-09-12
-weight: 9
+weight: 10
 toc: true
 tags: ["blackbox", "tuning", "hardware", "telemetry"]
 craft: ["Crafty"]
