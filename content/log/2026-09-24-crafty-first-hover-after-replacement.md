@@ -1,12 +1,12 @@
 ---
-title: Crafty — First Hover on the Replacement Board, After Three Wrong Turns
+title: Phoenix — First Hover, After Three Wrong Turns
 description: A dead motor, a battery reading that looked worse than it was, and a board-alignment value pulled from the wrong file — each one produced an identical, violent flip.
-lead: Stable in hand, then a clean hover, once the last of three stacked faults was found. Renamed Phoenix.
+lead: Stable in hand, then a clean hover, once the last of three stacked faults was found. Named Phoenix here.
 date: 2026-09-24
 weight: 1
 toc: true
 tags: ["hardware", "accelerometer", "tuning", "safety"]
-craft: ["Crafty"]
+craft: ["Phoenix"]
 firmware: "Betaflight 2026.6.0-alpha (e92c10887, May 15 2026), BMI270"
 duration: "~17 arms across the session; final hover 9–17 s each, 3 logs"
 log_file: "btfl_001.bbl … btfl_003.bbl (final successful set)"
@@ -123,11 +123,10 @@ it back, the board got a name of its own: **Phoenix**. Same lineage as Crafty (t
 [the board that overheated](/log/2026-09-17-crafty-temperature-warning/)), but a fresh physical unit
 that earned a fresh name after flying on the fourth attempt to get it right.
 
-{{< callout type="info" >}}
-This log entry and the site's `craft` taxonomy still say **Crafty**, for continuity with the
-existing `/craft/crafty/` history. `craft_name` on the board itself says **Phoenix**. If the OSD name
-and the site tag drift apart in practice, worth revisiting.
-{{< /callout >}}
+Phoenix is treated as its own craft on this site, not a continuation of Crafty's `/craft/crafty/`
+history — a different physical board, a different name, its own timeline starting with
+[the restore three days ago](/log/2026-09-23-crafty-board-replaced/). The full story, including
+Crafty's last days, is on [the blog](/blog/phoenix-rises-a-boards-hard-week/).
 
 ## Brought in line with the fleet standard
 
