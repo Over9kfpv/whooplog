@@ -3,7 +3,7 @@ title: Phoenix — Replacement Board Restored and Recalibrated
 description: The new board took the 17 September backup cleanly; the carried-over accelerometer calibration did not, and was redone.
 lead: Same config, different physical board — recalibrated, baselined, ready to fly. Not yet named Phoenix at this point; see the 24 September entry.
 date: 2026-09-23
-weight: 2
+weight: 3
 toc: true
 tags: ["hardware", "accelerometer", "osd"]
 craft: ["Phoenix"]

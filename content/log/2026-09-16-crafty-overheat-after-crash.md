@@ -3,7 +3,7 @@ title: Crafty — Overheating After a Crash, Not From Flying
 description: The OSD temperature warning followed ground re-arms against a jammed prop, not flight.
 lead: Motor 4 was commanded to 100 % while turning at 200–400 RPM.
 date: 2026-09-16
-weight: 4
+weight: 5
 toc: true
 tags: ["blackbox", "hardware", "telemetry"]
 craft: ["Crafty"]

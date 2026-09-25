@@ -3,7 +3,7 @@ title: Flights 007–031 — Twenty-Five Flight Batch
 description: A full flash of flights on the aggressive tune, and a battery habit that shows up across all of them.
 lead: The batch that prompted the rates change — and the batch during which logging silently stopped.
 date: 2026-09-09
-weight: 14
+weight: 15
 toc: true
 tags: ["battery", "tune-comparison", "batch"]
 craft: ["Crafty"]

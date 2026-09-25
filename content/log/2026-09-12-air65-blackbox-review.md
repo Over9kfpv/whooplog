@@ -3,7 +3,7 @@ title: Air65 — Blackbox Review of 16 Logs
 description: A balanced airframe, a log that samples below its own motor frequency, and crashes that hid the tune.
 lead: Fourteen flights across eight packs. The statistics were measuring collisions.
 date: 2026-09-12
-weight: 11
+weight: 12
 toc: true
 tags: ["blackbox", "tuning", "hardware", "telemetry"]
 craft: ["Air65"]

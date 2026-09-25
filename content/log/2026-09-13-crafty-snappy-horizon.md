@@ -3,7 +3,7 @@ title: Crafty — Snappier Horizon for Track Flying
 description: Six Angle/Horizon settings changed for a tiny-whoop track, and an accelerometer calibration that had gone wrong.
 lead: Aggressive on purpose. Saved, not yet flown when written.
 date: 2026-09-13
-weight: 9
+weight: 10
 toc: true
 tags: ["tuning", "modes", "accelerometer"]
 craft: ["Crafty"]

@@ -3,7 +3,7 @@ title: Air65 — Crafty's Snappier Horizon Copied Over
 description: The same six Angle/Horizon changes, applied to profile 0, with the craft-specific settings left out.
 lead: Saved, not yet flown when written.
 date: 2026-09-13
-weight: 8
+weight: 9
 toc: true
 tags: ["tuning", "modes"]
 craft: ["Air65"]

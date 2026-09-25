@@ -3,7 +3,7 @@ title: Phoenix — First Hover, After Three Wrong Turns
 description: A dead motor, a battery reading that looked worse than it was, and a board-alignment value pulled from the wrong file — each one produced an identical, violent flip.
 lead: Stable in hand, then a clean hover, once the last of three stacked faults was found. Named Phoenix here.
 date: 2026-09-24
-weight: 1
+weight: 2
 toc: true
 tags: ["hardware", "accelerometer", "tuning", "safety"]
 craft: ["Phoenix"]

@@ -10,6 +10,7 @@ decoded log showed, and anything left open.
 
 | Date | Entry | Craft | Duration | Verdict |
 | --- | --- | --- | --- | --- |
+| 2026-09-25 | [Cleaning Flux and Ink Stopped the Runaway Heating](2026-09-25-crafty-old-board-flux-cleaning/) | Crafty | Bench only | Old board: >85 °C uncleaned, 72 °C plateau after two IPA cleanings; not yet flown |
 | 2026-09-24 | [First Hover, After Three Wrong Turns](2026-09-24-crafty-first-hover-after-replacement/) | Phoenix | ~17 arms; final hover 9-17s x3 | Fixed and flying; crashflip and fleet settings brought in line |
 | 2026-09-23 | [Replacement Board Restored and Recalibrated](2026-09-23-crafty-board-replaced/) | Phoenix | Bench only | Restored, recalibrated, baselined at 63–65 °C no-fan — ready to fly |
 | 2026-09-17 | [Chasing a Temperature Warning to a New Board](2026-09-17-crafty-temperature-warning/) | Crafty | 9 logs, 4 packs + bench | Logs clean, fault never isolated; board replaced |
