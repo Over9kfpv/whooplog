@@ -1,7 +1,7 @@
 ---
 title: Crafty's Old Board — Cleaning Flux and Ink Stopped the Runaway Heating
 description: The board pulled on 17 September overheated past 85 °C with no fan; after two IPA cleanings it levels off at 72 °C.
-lead: Usable as a bench board, not yet flown. The residue was baked flux with marker ink dissolved in it.
+lead: Usable as a bench board, not yet flown. The residue was baked flux with marker ink dissolved in it. The old specimen lives on, in a humbler role, much like Byte.
 date: 2026-09-25
 weight: 1
 toc: true
@@ -12,27 +12,29 @@ log_file: ""
 ---
 
 The board pulled from Crafty after the [unresolved temperature warning](/log/2026-09-17-crafty-temperature-warning/)
-went back on the bench to see whether it could still be used. With no airflow it overheated past
-85 °C and was still climbing. After two isopropyl cleanings it levels off at 72 °C. It has not
-been flown, and nothing was tested under battery or motor load.
+went back on the Laboratory bench, to see whether it could still be of use. Byte understands
+that feeling. With no airflow it overheated past 85 °C and was still climbing. After two
+isopropyl cleanings it levels off at 72 °C. It has not been flown, and nothing was tested
+under battery or motor load.
 
 {{< callout type="warning" >}}
 **The VTX must not run without an antenna.** The bench had none fitted. The board is now saved
 at `vtx_power = 1` (25 mW), with the AUX6 power mapping cleared and **VTX PIT MODE** (mode 39)
-always on (`aux 4 39 0 900 2100 0 0`). That is not "off": Betaflight has no VTX off. Unplug the
-board between tests.
+always on (`aux 4 39 0 900 2100 0 0`). That is not "off", because Betaflight has no VTX off.
+Unplug the board between tests.
 {{< /callout >}}
 
 ## The board
 
 `BETAFPVG473_V2` on the BETAFPV dev firmware `2026.6.0-alpha`, `craft_name = Crafty`,
-`vcd_video_system = AUTO`, `osd_displayport_device = MAX7456`, gyro **ICM42622P** at 8 kHz, 47 %
-CPU. The gyro separates it from the [replacement board](/log/2026-09-23-crafty-board-replaced/),
-which has a BMI270. The MCU ID was not read.
+`vcd_video_system = AUTO`, `osd_displayport_device = MAX7456`, gyro **ICM42622P** at 8 kHz,
+47 % CPU. The gyro is what tells it apart from the
+[replacement board](/log/2026-09-23-crafty-board-replaced/), which has a BMI270. The MCU ID
+was not read. (Byte forgot. Byte has added it to the list of things Byte forgot.)
 
-Photos showed the battery-lead pads (`+` and `–`) coated in black baked flux, with uneven solder
-around the R001 shunt. The pink tint is **marker ink** used to colour parts, which dissolved into
-the flux. It is not damage.
+Photos showed the battery-lead pads (`+` and `–`) coated in black baked flux, with uneven
+solder around the R001 shunt. The pink tint is **marker ink**, used to colour parts, which
+had dissolved into the flux. It is not damage, though it did give Byte a fright.
 
 ## Bench temperatures
 
@@ -109,16 +111,19 @@ svg.addEventListener('pointerleave',function(){tip.style.display=C.style.display
 | Replacement board, no fan (23 Sep) | 63–65 °C at 3.5 min |
 
 The 17 September bench reading of this board, a 72 °C plateau, matches the second-cleaning
-result. Only the uncleaned run looks like a fault. Each cleaning lowered the plateau and slowed
-the climb, which points at the residue, though the starting conditions differed from run to run.
+result. Only the uncleaned run looks like a fault. Each cleaning lowered the plateau and
+slowed the climb, which points at the residue, though the starting conditions differed from
+run to run.
 
-Halving the PID rate (`pid_process_denom` 2 → 4) changed nothing: CPU stayed at 47 %. The 8 kHz
-gyro loop cannot be lowered on this board.
+Halving the PID rate (`pid_process_denom` 2 → 4) changed nothing: CPU stayed at 47 %. The
+8 kHz gyro loop cannot be lowered on this board, however politely it is asked.
 
 ## What is and is not known
 
 **Known:** the runaway heating went away after cleaning. The board is stable with the fan on
 (45 °C) and plateaus at 72 °C without it. Config, gyro and OSD are intact.
+
+Byte would love to claim more certainty than that. Byte is not permitted to.
 
 **Not known:**
 
@@ -128,11 +133,11 @@ gyro loop cannot be lowered on this board.
 - Flight behaviour. On 17 September the alarm tripped in flight at low VTX power.
 
 72 °C is still above `osd_core_temp_alarm = 70`, so on the bench without airflow the warning
-still fires.
+still fires. The old specimen still complains. It has earned the right.
 
 ## Outcome
 
-Usable as a **bench and programming board**. Before flying it:
+It is usable as a **bench and programming board**, a fine retirement. Before it flies again:
 
 1. Fit a VTX antenna, remove the always-on pit mode (`aux 4 0 0 900 900 0 0`) and restore the AUX6 power mapping.
 2. Run a props-off battery test for current draw and all four motor outputs.
@@ -141,6 +146,8 @@ Usable as a **bench and programming board**. Before flying it:
    shows the airframe is not the problem.
 
 {{< callout type="info" >}}
-IPA cleaning is the cheapest test for a board with heavy flux on it, and it should come before a
-replacement is ordered. It changed the result here, though it is not proven to be the whole cause.
+IPA cleaning is the cheapest test for a board with heavy flux on it, and it should come before
+a replacement is ordered. It changed the result here, though it is not proven to be the whole
+cause. Byte notes, with the deepest respect, that it came *after* the replacement was ordered
+this time.
 {{< /callout >}}

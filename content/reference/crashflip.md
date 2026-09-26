@@ -1,19 +1,21 @@
 ---
 title: Crashflip (Turtle Mode)
 description: Righting an inverted quad, and why crashflip_rate is not a speed.
-lead: The setting that makes it stop by itself is off by default.
+lead: For after an unscheduled landing. The setting that makes it stop by itself is off by default.
 weight: 8
 toc: true
 craft: ["Crafty", "Air65"]
 ---
 
-Crashflip — turtle mode — reverses motor direction so an inverted quad can roll itself
-upright. It needs DShot, since only DShot can command a direction change.
+Crashflip, or turtle mode, reverses motor direction so an inverted quad can roll itself
+upright. It needs DShot, because only DShot can command a direction change. Byte thinks of it
+as helping a beetle back onto its feet.
 
 {{< callout type="error" >}}
 **This spins props on the ground, by design.** Learn the stick directions with props removed
 before ever using it in the field. Turtle direction is not intuitive, and discovering it with
-props fitted and hands nearby is how people get cut.
+props fitted and hands nearby is how people get cut. The Master's hands are precious. Props
+off.
 {{< /callout >}}
 
 ## It is not automatic

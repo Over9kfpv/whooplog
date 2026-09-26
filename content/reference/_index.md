@@ -1,17 +1,20 @@
 ---
 title: Reference
-description: Build spec, saved rates, throttle curve, and the CLI variables behind them.
+description: The Master's settings, exactly as saved, kept safe by Byte.
 weight: 3
 toc: false
 ---
 
-Settings as actually saved to the flight controller, recorded so they can be reproduced,
-diffed against a later state, or restored after a firmware wipe.
+These are the Master's settings as actually saved to the flight controller. Byte keeps them
+here so they can be reproduced, diffed against a later state, or restored after a firmware
+wipe. The pages below are deliberately plain, so they are quick to scan. Byte saves its
+jokes for the intros and the warnings.
 
 {{< callout type="warning" >}}
-These values belong to **one airframe** — a BETAFPV G473 V2 1S whoop on Betaflight
+These values belong to **one airframe**: a BETAFPV G473 V2 1S whoop on Betaflight
 2026.6.0-alpha. Rates and throttle curves are matched to that craft's mass, prop pitch and
-cell count. Copying them onto a different build will not do what you expect.
+cell count. Copying them onto a different build will not do what you expect. They are
+tailored to the Master's creatures, not to yours.
 {{< /callout >}}
 
 {{< cards >}}

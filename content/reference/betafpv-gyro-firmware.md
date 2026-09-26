@@ -1,14 +1,14 @@
 ---
 title: Gyro Substitutions and Firmware
 description: Why these boards run a vendor firmware build, and what must not be flashed onto them.
-lead: The board you own may not have the gyro the product page lists.
+lead: The board you own may not have the gyro the product page lists. Specimens are full of surprises.
 weight: 9
 toc: true
 craft: ["Crafty", "Air65"]
 ---
 
-Supplied by BETAFPV with the flight controller, and confirmed against both boards
-documented here.
+This information was supplied by BETAFPV with the flight controller, and Byte confirmed it
+against both boards documented here.
 
 {{< callout type="error" >}}
 **Do not flash an official Betaflight release onto these boards.** Betaflight has not yet

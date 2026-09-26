@@ -1,7 +1,7 @@
 ---
 title: BETAFPV G473 V2 — 1S Whoop Build Spec
 description: Board, MCU, sensors, storage and firmware for the airframe documented here.
-lead: The hardware every other page on this site refers to.
+lead: The hardware every other page on this site refers to. Crafty's board, now retired to the bench; Phoenix flies in its frame.
 weight: 1
 toc: true
 craft: ["Crafty"]

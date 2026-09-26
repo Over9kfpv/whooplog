@@ -56,7 +56,8 @@ renumbering: newest gets the lowest number, and every older log page shifts up b
 
 ## 4. Rewrite, don't copy
 
-- Reference voice, findings stated as findings. Condense; keep tables, numbers, commands.
+- Byte voice (see CLAUDE.md "Voice"), findings still stated as findings. Condense; keep
+  tables, numbers and commands verbatim. Blog posts get `authors: [{name: "Byte (bench minion)"}]`.
 - Drop the H1 (the theme renders `title`), the `# Title` restatement, and the "Interactive
   version" artifact links. Drop `sound.mp4`/`motor.jpeg` pointers; those files are not in this repo.
 - `> [!WARNING]` becomes `{{< callout type="warning" >}}…{{< /callout >}}`. NOTE/TIP become

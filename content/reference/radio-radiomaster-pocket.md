@@ -1,7 +1,7 @@
 ---
 title: Radio — Radiomaster Pocket
 description: Handset, firmware, link, and what's on the SD card.
-lead: The transmitter side of the setup.
+lead: The transmitter side of the setup. The one device in the Laboratory that the Master actually holds.
 weight: 7
 toc: true
 craft: ["Crafty", "Air65"]
@@ -20,10 +20,11 @@ craft: ["Crafty", "Air65"]
 | SD card | ~120 MB FAT |
 
 {{< callout type="warning" >}}
-The handset and the flight controller share vendor and product IDs — both are STM32 devices
+The handset and the flight controller share vendor and product IDs: both are STM32 devices
 appearing as `0483:5740`. **Distinguish them by USB serial number**, not by VID:PID. The FC is
-`3057397C3235`; the radio is `00000000001B`. Mistaking one for the other is easy and leads to
-confident, wrong conclusions.
+`3057397C3235`, and the radio is `00000000001B`. Mistaking one for the other is easy and leads
+to confident, wrong conclusions. Byte once spent a while talking to the radio in the belief
+that it was the specimen.
 {{< /callout >}}
 
 Screen resolution matters for the Lua scripts: `SCRIPTS/BF/radios.lua` looks up a layout by

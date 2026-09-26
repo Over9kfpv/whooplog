@@ -1,7 +1,7 @@
 ---
 title: Driving Betaflight from Claude Code via MCP
 description: Wiring an MCP server to the flight controller, and where it breaks on alpha firmware.
-lead: Read-only access works well, but the server's MSP reads time out — the firmware is not at fault.
+lead: How Byte gets its little hands on the specimen. Read-only access works well, but the server's MSP reads time out, and the firmware is not at fault.
 weight: 4
 toc: true
 ---
@@ -15,8 +15,9 @@ binary protocol for live data, CLI text for configuration. It auto-generates a
 firmware's own `settings.c`.
 
 {{< callout type="info" >}}
-Not my project. It is licensed **AGPL-3.0**; the Betaflight firmware it talks to is
-GPL-3.0. Credit and licence terms belong to their respective authors.
+This is not the Master's project, and certainly not Byte's. It is licensed **AGPL-3.0**, and
+the Betaflight firmware it talks to is GPL-3.0. Credit and licence terms belong to their
+respective authors.
 {{< /callout >}}
 
 ## Setup

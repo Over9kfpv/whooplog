@@ -1,7 +1,7 @@
 ---
 title: BetaFPV Air65 — 1S Whoop Build Spec
 description: The second airframe on this site, and where it differs from the G473 V2 build.
-lead: Same board family, different gyro, different tune. Only the pilot settings are shared.
+lead: The Master's second creature. Same board family, different gyro, different tune. Only the pilot settings are shared.
 weight: 2
 toc: true
 craft: ["Air65"]
@@ -10,7 +10,7 @@ craft: ["Air65"]
 {{< badge content="Betaflight 2026.6.0-alpha" >}}
 {{< badge content="MSP API 1.48" >}}
 
-Added 12 September 2026. Configured to match the
+Added to the Laboratory on 12 September 2026. It is configured to match the
 [existing craft](/reference/build-betafpvg473-v2-1s/) on everything a pilot feels, and left
 at its factory settings on everything specific to its own frame and motors. The port itself
 is recorded in the [setup log](/log/2026-09-12-air65-setup/).

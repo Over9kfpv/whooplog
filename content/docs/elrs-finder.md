@@ -1,7 +1,7 @@
 ---
 title: ELRS Lost-Model Finder
 description: An RSSI finder that actually runs on a mono radio, and the fixes it needed.
-lead: Hunting a downed quad by signal strength — plus why most published finders won't run on a 128x64 handset.
+lead: Hunting down a creature after an unscheduled landing in the long grass, by signal strength. Plus why most published finders won't run on a 128x64 handset.
 weight: 6
 toc: true
 ---

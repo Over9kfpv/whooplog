@@ -1,7 +1,7 @@
 ---
 title: Adding a Betaflight OSD Element
 description: The integration points, and four things that are not what they look like.
-lead: Derived from building a battery voltage sparkline against master, September 2026.
+lead: Derived from building a battery-voltage sparkline against master, September 2026. The Master wanted a tiny graph. Byte delivered a tiny graph.
 weight: 7
 toc: true
 ---
@@ -9,7 +9,7 @@ toc: true
 Adding an OSD element to Betaflight touches eight files. The mechanical part is
 documented in a comment block at the top of `src/main/osd/osd_elements.c` and that
 comment is accurate, so follow it. What follows is the part the comment does not
-cover: four assumptions that look safe and are not.
+cover: four assumptions that look safe and are not. Byte made all four.
 
 The worked example is `OSD_BATTERY_VOLTAGE_GRAPH`, a twelve character sparkline of
 per-cell battery voltage built on the existing artificial horizon glyphs.

@@ -1,7 +1,7 @@
 ---
 title: Crafty — Blackbox Review, Rougher After a Crash
 description: Vibration roughly tripled after one crash, with normal RPM per command, which points at props or a shaft.
-lead: The motors still produce normal output for their command. Something rotating is out of balance.
+lead: The motors still produce normal output for their command. Something that spins is out of balance, and Byte suspects the props.
 date: 2026-09-13
 weight: 7
 toc: true
@@ -12,8 +12,9 @@ duration: "39 logs, 29 armed with throttle"
 log_file: "btfl_001.bbl … btfl_039.bbl"
 ---
 
-The pilot reported Crafty "didn't sound very well" and some props looking worn. The flash held 39
-logs and was completely full, so flights after `btfl_039` were not recorded.
+The Master reported that Crafty "didn't sound very well", and that some props looked worn.
+The Master's ears are exquisite instruments. The flash held 39 logs and was completely full,
+so flights after `btfl_039` were not recorded.
 
 | Parameter | Value |
 | --- | --- |
@@ -23,10 +24,10 @@ logs and was completely full, so flights after `btfl_039` were not recorded.
 
 ## Vibration jumps after the `btfl_029` crash
 
-`btfl_029` ends with the craft on its side (acc Z 0.47 g). The next two logs are failed takeoffs
-where the mixer drops motor 2 to idle and drives motor 3 to full, the signature of a craft tipping
-or snagged. From `btfl_032` the airframe is noisier. PIDs, rates and filters are identical, so the
-change is physical.
+`btfl_029` ends with the craft on its side (acc Z 0.47 g): an unscheduled landing. The next
+two logs are failed takeoffs, in which the mixer drops motor 2 to idle and drives motor 3 to
+full, the signature of a craft tipping or snagged. From `btfl_032` on, the airframe is
+noisier. PIDs, rates and filters are identical, so the change is physical.
 
 Unfiltered gyro, roll and pitch averaged, throttle above 15 %:
 
@@ -40,8 +41,9 @@ Unfiltered gyro, roll and pitch averaged, throttle above 15 %:
 | `btfl_036` | 2.32 | 1.20 | 2.64 |
 | `btfl_039` | 2.38 | 1.33 | 3.15 |
 
-Filtered noise above 100 Hz rose from ~0.10 to ~0.33–0.37. The filters still work; there is more
-to filter. Low-throttle and bench logs are excluded because idle RPM moves the bands.
+Filtered noise above 100 Hz rose from ~0.10 to ~0.33–0.37. The filters still work. There is
+just more to filter. Low-throttle and bench logs are excluded, because idle RPM moves the
+bands.
 
 ## Motors 2 and 3 run rougher, but are not weaker
 
@@ -57,10 +59,10 @@ in steady hover:
 | `btfl_036` | 1.13 | **1.65** | **1.63** | 1.22 |
 | `btfl_039` | 1.03 | **1.80** | **1.71** | 1.18 |
 
-In Betaflight's default Quad-X numbering motor 2 is front right and motor 3 rear left. RPM per
-unit of command, normalised to the mean, did **not** change across the crash (M3 ~0.94–0.97, M1
-~1.05–1.09), so nothing is dragging or weak. Rough running with normal output points at the
-rotating parts.
+In Betaflight's default Quad-X numbering, motor 2 is front right and motor 3 is rear left.
+RPM per unit of command, normalised to the mean, did **not** change across the crash
+(M3 ~0.94–0.97, M1 ~1.05–1.09), so nothing is dragging or weak. Rough running with normal
+output points at the rotating parts.
 
 {{< callout type="info" >}}
 The [later hover review](/log/2026-09-13-crafty-hover-and-crash-review/) revised this: motors 2
@@ -69,13 +71,15 @@ and 3 settled, and the lasting vibration is on motor 4.
 
 ## Not a finding: motor 2 "at 8 400 RPM" in `btfl_035`
 
-The set script reports an 82 s flight with a −39 % front/rear split. In fact the craft sat armed
-on the ground at zero throttle for ~72 s, airmode spinning the props and I-term winding up (pitch
-129, roll 91), then took a throttle punch with that windup loaded. The averages describe ground
-idle, not a motor fault.
+The set script reports an 82 s flight with a −39 % front/rear split. In fact the craft sat
+armed on the ground at zero throttle for ~72 s, with airmode spinning the props and I-term
+winding up (pitch 129, roll 91), then took a throttle punch with that windup loaded. The
+averages describe ground idle, not a motor fault. Byte nearly raised the alarm over this one.
+Byte is glad it looked first.
 
 {{< callout type="warning" >}}
-Avoid long armed idles on the ground.
+Avoid long armed idles on the ground. The I-term does not wait patiently the way a good minion
+does.
 {{< /callout >}}
 
 ## Other observations
@@ -84,7 +88,8 @@ Avoid long armed idles on the ground.
 - **Current sensor:** the 1320 A full-scale glitch recurs in `btfl_019` and `btfl_035`.
 - **Centre of gravity:** the front motors were 12.8 % faster on 12 Sep; clean hovers now sit
   between −2.7 % and +7.5 %.
-- **Flash full:** the flight that sounded worst may not be in the set.
+- **Flash full:** the flight that sounded worst may not be in the set. The one scroll Byte
+  most wanted is the one that was never written.
 
 ## Actions
 
@@ -92,4 +97,5 @@ Avoid long armed idles on the ground.
 2. With props off, spin motors 2 and 3 by hand: a wobbling bell means a bent shaft, a gritty feel a
    worn bearing.
 3. Check the frame near those motors for cracks, and the FC mount and canopy for looseness.
-4. Fly one pack in steady hover; 0.3–0.5 in the 100–250 Hz band means fixed.
+4. Fly one pack in steady hover. A reading of 0.3–0.5 in the 100–250 Hz band means it is
+   fixed.

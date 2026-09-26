@@ -1,0 +1,12 @@
+/* Laboratory green: the Byte persona's accent. Overrides Hextra's primary hue only. */
+:root {
+  --primary-hue: 152deg;
+  --primary-saturation: 70%;
+  --primary-lightness: 38%;
+}
+
+.dark {
+  --primary-hue: 150deg;
+  --primary-saturation: 65%;
+  --primary-lightness: 50%;
+}

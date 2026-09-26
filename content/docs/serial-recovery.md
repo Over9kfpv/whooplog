@@ -1,13 +1,14 @@
 ---
 title: Recovering a Stuck Betaflight Serial Connection
 description: Three failure modes that look alike and have different fixes.
-lead: Diagnosis here is symptom-driven, not sequential.
+lead: For when the specimen stops answering. Diagnosis here goes by symptom, not by sequence.
 weight: 3
 toc: true
 ---
 
-Three different problems all present as "the board stopped responding". They are
-distinguishable by the exact error, and they have nothing to do with each other.
+Three different problems all show up as "the board stopped responding". They can be told
+apart by the exact error, and they have nothing to do with each other. Byte has met all
+three, usually on the same evening.
 
 ## Mode transitions
 

@@ -6,3 +6,5 @@ date: {{ .Date }}
 weight: 10
 toc: true
 ---
+
+<!-- Byte voice, light touch: in-character lead and intro, plain procedures. See CLAUDE.md "Voice". -->

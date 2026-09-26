@@ -14,7 +14,7 @@ log_file: ""
 
 ## Setup
 
-What this flight was for.
+What this flight was for. (In Byte's voice: see CLAUDE.md "Voice". Keep the numbers exact.)
 
 ## What changed
 

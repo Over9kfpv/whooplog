@@ -1,7 +1,7 @@
 ---
 title: Decoding a Blackbox Log
 description: Turning a .bbl into CSV, and reading the decoder's output honestly.
-lead: The decoder reports most of your log as missing. That is usually correct and expected.
+lead: How Byte reads the sacred scrolls. The decoder reports most of your log as missing. That is usually correct, and expected.
 weight: 2
 toc: true
 ---

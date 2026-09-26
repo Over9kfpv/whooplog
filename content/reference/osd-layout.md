@@ -1,14 +1,15 @@
 ---
 title: OSD Layout
 description: A minimal OSD built around trustworthy battery information.
-lead: Six elements, and the reason the low-voltage warning was previously useless.
+lead: Six elements, and the reason the low-voltage warning was previously useless. Byte has since stopped ignoring it too.
 weight: 5
 toc: true
 craft: ["Crafty", "Air65"]
 ---
 
-The design brief was narrow: reliable battery information, a minimal screen, and the flight
-mode always visible. Everything not serving one of those was switched off.
+The Master's brief was narrow: reliable battery information, a minimal screen, and the
+flight mode always visible. Everything that did not serve one of those was switched off.
+Byte argued, briefly, for a small minion icon in the corner. It was switched off.
 
 ## What's on screen
 

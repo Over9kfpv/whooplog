@@ -1,14 +1,15 @@
 ---
 title: CLI Variables for This Build
 description: Paste-to-reproduce set lines for the rate profile and throttle curve.
-lead: The exact commands to restore this configuration after a wipe.
+lead: The exact incantations to restore this configuration after a wipe.
 weight: 4
 toc: true
 craft: ["Crafty", "Air65"]
 ---
 
 These are **this build's** values, not recommendations. They exist so the configuration can
-be restored after a firmware flash or compared against a later state.
+be restored after a firmware flash, or compared against a later state. Byte keeps them the way
+some minions keep a spare key under the doormat.
 
 ## Rates and throttle
 
@@ -53,9 +54,10 @@ save
 ```
 
 {{< callout type="warning" >}}
-`save` writes to EEPROM **and reboots the board**. Everything before it lives in RAM only —
-disconnecting without saving discards the lot. Conversely, once saved there is no undo, so
-capture a `diff all` first if the current state is worth keeping.
+`save` writes to EEPROM **and reboots the board**. Everything before it lives in RAM only, so
+disconnecting without saving discards the lot. Once saved, though, there is no undo, so
+capture a `diff all` first if the current state is worth keeping. Byte learned both halves of
+this the hard way.
 {{< /callout >}}
 
 ## Capturing current state before changing anything

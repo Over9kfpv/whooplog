@@ -1,7 +1,7 @@
 ---
 title: Throttle Curve and Idle
 description: Throttle limit, midpoint, expo and motor idle as saved.
-lead: A capped and softened throttle curve for a 1S whoop.
+lead: A capped and softened throttle curve for a 1S whoop, so the Master's creatures stay where they are put.
 weight: 3
 toc: true
 craft: ["Crafty", "Air65"]

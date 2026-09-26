@@ -1,7 +1,7 @@
 ---
 title: Extracting Blackbox Logs Over USB Mass Storage
 description: Getting .bbl files off the onboard SPI flash on Linux.
-lead: The board can present its blackbox flash as a USB drive. This is the fastest way to get logs off it.
+lead: The board can present its blackbox flash as a USB drive. This is the fastest way for Byte to fetch the scrolls.
 weight: 1
 toc: true
 ---

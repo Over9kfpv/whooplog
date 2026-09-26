@@ -1,13 +1,14 @@
 ---
 title: Actual Rates
 description: Centre sensitivity, max rate and expo per axis, with the CLI variables behind them.
-lead: The saved rate profile, and the quantization trap that changes what you type.
+lead: The saved rate profile ("flew nice", said the Master), and the quantization trap that changes what you type.
 weight: 2
 toc: true
 craft: ["Crafty", "Air65"]
 ---
 
-Rate system is `rates_type = ACTUAL`, on rate profile 0.
+The rate system is `rates_type = ACTUAL`, on rate profile 0. These are pilot settings, so
+every one of the Master's creatures carries them.
 
 ## Saved values
 
@@ -24,10 +25,10 @@ deliberately slower and more linear for controlled turns.
 ### Previous values
 
 The first version of this profile ran noticeably more expo: roll 0.53, pitch 0.40, yaw 0.30.
-That proved too aggressive in the air — the heavy centre smoothing on roll made small
-corrections feel vague, and the roll/pitch mismatch (0.53 vs 0.40) meant the two axes did not
-respond alike to the same stick movement. Reducing expo and matching roll to pitch fixed
-both. Rates and max rates were never the problem and are unchanged.
+The Master found that too aggressive in the air. The heavy centre smoothing on roll made
+small corrections feel vague, and the roll/pitch mismatch (0.53 vs 0.40) meant the two axes
+did not respond alike to the same stick movement. Reducing expo and matching roll to pitch
+fixed both. Rates and max rates were never the problem and are unchanged.
 
 ## The quantization trap
 

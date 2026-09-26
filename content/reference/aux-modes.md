@@ -1,11 +1,14 @@
 ---
 title: Aux Modes and Switches
 description: The switch map, and how to read raw aux output correctly.
-lead: Resolving a boxId is the step everyone gets wrong.
+lead: Resolving a boxId is the step everyone gets wrong. Byte got it wrong first, so you don't have to.
 weight: 6
 toc: true
 craft: ["Crafty", "Air65"]
 ---
+
+The Master's switches, slot by slot. Muscle memory is sacred: every creature gets this exact
+map.
 
 ## Current switch map
 

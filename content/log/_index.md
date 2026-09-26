@@ -1,12 +1,13 @@
 ---
 title: Flight Log
-description: Per-flight findings from decoded blackbox data.
+description: Per-flight findings, read from the sacred scrolls by Byte on the Master's behalf.
 weight: 2
 toc: false
 ---
 
-One entry per flight worth analysing. Each records what the flight was for, what the
-decoded log showed, and anything left open.
+One entry per flight worth analysing, each lovingly decoded by Byte while the Master did
+the actual flying. Every entry records what the flight was for, what the sacred scrolls
+showed, and anything left open. Newest first, as the Master prefers.
 
 | Date | Entry | Craft | Duration | Verdict |
 | --- | --- | --- | --- | --- |
@@ -28,8 +29,8 @@ decoded log showed, and anything left open.
 | 2026-09-08 | [006 — Post-Rebuild Shakedown](2026-09-08-post-rebuild-shakedown/) | Crafty | 30.6 s | Rebuild sound; two open issues |
 
 {{< callout type="info" >}}
-Raw `.bbl` logs are **not committed** to this repository — they are working data, kept
-locally. Each entry names its source file, and
+Raw `.bbl` logs are **not committed** to this repository. The sacred scrolls stay in the
+Laboratory vault, where they are working data. Each entry names its source file, and
 [Decoding a Blackbox Log](/docs/decode-and-analyze-blackbox/) documents the exact command
 that turns one into the numbers quoted here.
 {{< /callout >}}

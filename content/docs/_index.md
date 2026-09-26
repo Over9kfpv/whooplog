@@ -1,12 +1,14 @@
 ---
 title: Process Docs
-description: Repeatable procedures for working with the flight controller.
+description: Repeatable procedures for tending the specimens, written down so the Master never repeats Byte's mistakes.
 weight: 4
 toc: false
 ---
 
-Procedures that worked, written down with the failure modes that cost time the first time
-around. Each one assumes a Linux host and a Betaflight board on USB.
+Procedures that worked, written down together with the failure modes that cost time the
+first time round. Byte suffered through those failure modes so the Master need not. Each
+procedure assumes a Linux host and a Betaflight board on USB. The steps themselves are kept
+plain, because nobody wants a joke in the middle of `mount`.
 
 {{< cards >}}
   {{< card link="extract-blackbox-logs/" title="Extracting Blackbox Logs" icon="download"

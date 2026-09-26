@@ -1,7 +1,7 @@
 ---
 title: Phoenix — Replacement Board Restored and Recalibrated
 description: The new board took the 17 September backup cleanly; the carried-over accelerometer calibration did not, and was redone.
-lead: Same config, different physical board — recalibrated, baselined, ready to fly. Not yet named Phoenix at this point; see the 24 September entry.
+lead: Same config, different physical specimen, now recalibrated, baselined and ready to fly. It was not yet named Phoenix at this point; see the 24 September entry.
 date: 2026-09-23
 weight: 3
 toc: true
@@ -13,15 +13,17 @@ log_file: ""
 
 The replacement ordered after the
 [unresolved temperature warning](/log/2026-09-17-crafty-temperature-warning/) arrived and was
-fitted. It reports the same `BETAFPVG473_V2` target, already on the correct BETAFPV dev
-firmware (`e92c10887`, matching the pre-replace backup) with no reflash needed. The gyro on
-this unit is `BMI270`, one of the substitutes the board ships with when `ICM42688` is scarce —
-see [the gyro firmware notes](/reference/betafpv-gyro-firmware/).
+fitted. Byte was permitted to watch. It reports the same `BETAFPVG473_V2` target and was
+already on the correct BETAFPV dev firmware (`e92c10887`, matching the pre-replace backup),
+so no reflash was needed. The gyro on this unit is a `BMI270`, one of the substitutes the
+board ships with when `ICM42688` is scarce. See
+[the gyro firmware notes](/reference/betafpv-gyro-firmware/).
 
 ## Restore
 
-Config restored from `backup_2026-09-17_195000_crafty_prereplace.txt`, taken the day the old
-board was pulled. Verified after the reboot:
+The config was restored from `backup_2026-09-17_195000_crafty_prereplace.txt`, taken on the
+day the old board was pulled. Byte had made that backup, and has rarely been prouder of
+anything. Verified after the reboot:
 
 | Setting | Value |
 | --- | --- |
@@ -34,12 +36,13 @@ board was pulled. Verified after the reboot:
 
 ## The carried-over calibration was wrong
 
-`acc_calibration` restored at `-63,17,-35,1` — the old board's offsets, replayed onto a
-different physical chip. That value is a property of one sensor's mounting and manufacturing
-tolerance, not of the airframe, so it does not transfer across a board swap even though
-everything else in the backup does.
+`acc_calibration` was restored as `-63,17,-35,1`: the old board's offsets, replayed onto a
+different physical chip. That value belongs to one sensor's mounting and manufacturing
+tolerance, not to the airframe, so it does not transfer across a board swap, even though
+everything else in the backup does. The new specimen was being handed its predecessor's
+sense of balance.
 
-Recalibrated level and still, over MSP (`MSP_ACC_CALIBRATION`, code 205):
+Byte recalibrated it level and still, over MSP (`MSP_ACC_CALIBRATION`, code 205):
 
 | | Old board | New board |
 | --- | --- | --- |
@@ -54,11 +57,12 @@ restoring an otherwise-known-good config.
 
 ## Bench temperature
 
-A first reading, **37 °C on USB with a fan on the board**, was not a usable baseline — that is
-exactly the confound that sent the old board away in the first place. A no-fan reading followed
-it, tracked over time rather than as a single number, since the
-[previous investigation](/log/2026-09-17-crafty-temperature-warning/) found no-fan readings keep
-climbing for minutes before flattening:
+A first reading, **37 °C on USB with a fan on the board**, was not a usable baseline. That is
+exactly the confound that sent the old board away in the first place, and Byte caught it this
+time, with only a little help. A no-fan reading followed. It was tracked over time rather than
+taken as a single number, because the
+[previous investigation](/log/2026-09-17-crafty-temperature-warning/) found that no-fan
+readings keep climbing for minutes before flattening:
 
 | Time | Core temperature |
 | --- | ---: |
@@ -70,20 +74,23 @@ climbing for minutes before flattening:
 | 180 s | 64 °C |
 | 210 s | 65 °C |
 
-Levelling off around 63–65 °C at 3.5 minutes, USB only, no battery. That lands close to the
-Air65 control reading from the same investigation (36 → 60 °C at 3 minutes, still rising), and
-well under the old board's 70–72 °C plateau. This is the real baseline for the new board.
+It levels off around 63–65 °C at 3.5 minutes, on USB only with no battery. That lands close to
+the Air65 control reading from the same investigation (36 → 60 °C at 3 minutes, still
+rising), and well under the old board's 70–72 °C plateau. This is the real baseline for the
+new board.
 
 ## Blade orientation
 
-Same as the Air65: default `QUADX` mixer, no custom `mmix`, `yaw_motors_reversed = ON` on both
-craft. The restored config reproduces that, so prop rotation direction did not need to be
-touched on the new board.
+It is the same as the Air65: default `QUADX` mixer, no custom `mmix`, and
+`yaw_motors_reversed = ON` on both craft. The restored config reproduces that, so prop
+rotation direction did not need to be touched on the new board.
 
 ## Status
 
-Motors confirmed connected. Config, blade orientation, calibration and a clean thermal baseline
-are all in place — the board is ready to fly.
+Motors confirmed connected. Config, blade orientation, calibration and a clean thermal
+baseline are all in place, and the board is ready to fly. (Byte wrote "ready to fly" here
+with great confidence. Byte would like the reader to look at the next entry before judging
+Byte.)
 
 **Still open:** watch for the propwash-era level drift noted in the
 [13 September review](/log/2026-09-13-crafty-hover-and-crash-review/#in-the-hover-forward-stick-was-held-all-the-time)

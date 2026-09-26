@@ -1,7 +1,7 @@
 ---
 title: Betaflight Lua Scripts on the Transmitter
 description: Installing the TX scripts, and which of the two tools you actually want.
-lead: Field tuning without a laptop — once you know that one tool uses the wheel and the other uses the sticks.
+lead: Field tuning without a laptop (or a Byte), once you know that one tool uses the wheel and the other uses the sticks.
 weight: 5
 toc: true
 ---

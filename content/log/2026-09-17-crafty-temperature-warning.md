@@ -1,7 +1,7 @@
 ---
 title: Crafty — Chasing a Temperature Warning to a New Board
 description: Clean logs, an inconclusive bench test, and a baseline taken with a fan on.
-lead: The fault was never isolated. A replacement board was ordered on 18 September.
+lead: The fault was never isolated. A replacement specimen was ordered on 18 September, and Byte took it personally.
 date: 2026-09-17
 weight: 4
 toc: true
@@ -22,8 +22,8 @@ log_file: "btfl_001.bbl … btfl_009.bbl"
 | Battery internal resistance | 16–21 mΩ, against 15 mΩ on 13 Sep |
 | Pack start voltage | 3.72–4.04 V, against 4.15–4.26 V on 13 Sep |
 
-The short flights come from under-charged packs. Blackbox records no temperature, so the logs can
-only rule causes out.
+The short flights come from under-charged packs. Blackbox records no temperature, so the
+sacred scrolls can only rule causes out. They ruled out a great deal, and pointed at nothing.
 
 ## Bench temperatures
 
@@ -37,28 +37,28 @@ USB only, no battery:
 | Motors disconnected, no airflow | 48 → 70 °C, unchanged |
 | Air65, no airflow (control) | 36 → 60 °C at 3 min, still rising |
 
-It plateaus, a little airflow holds it at 39 °C, the motors are not involved and VTX power makes
-no difference. Crafty runs about 10 °C above the Air65 while doing more work: an 8 kHz gyro loop
-at 49 % CPU against 3.2 kHz at 39 %.
+It plateaus. A little airflow holds it at 39 °C, the motors are not involved, and VTX power
+makes no difference. Crafty runs about 10 °C above the Air65 while doing more work: an 8 kHz
+gyro loop at 49 % CPU, against 3.2 kHz at 39 %.
 
 {{< callout type="warning" >}}
 The 39–41 °C USB readings used as a baseline on 13 and 16 September were taken **with a fan
-blowing on the board**. That was not known until late in the session and led to a premature
-conclusion that the board was damaged. Bench temperatures are only comparable when airflow is
-stated.
+blowing on the board**. Nobody knew that until late in the session, and it led to a premature
+conclusion that the board was damaged. Laboratory temperatures are only comparable when the
+airflow is stated. Byte now states the airflow. Always. Even in conversation.
 {{< /callout >}}
 
 {{< callout type="info" >}}
-A saved `vtx_power` does not stick on the bench: with no receiver, AUX6 defaults to 1500, which
-maps to 200 mW. Testing low power needs the radio on with the switch down.
+A saved `vtx_power` does not stick on the bench. With no receiver, AUX6 defaults to 1500,
+which maps to 200 mW. Testing at low power needs the radio on, with the switch down.
 {{< /callout >}}
 
 ## Outcome
 
-The warning persisted in flight at low VTX power and the fault was never isolated. For the new
-board:
+The warning persisted in flight at low VTX power, and the fault was never isolated. The Master
+decreed a new board. For its arrival, Byte prepared this list:
 
-1. Flash BETAFPV's custom firmware, not stock Betaflight — see
+1. Flash BETAFPV's custom firmware, not stock Betaflight. See
    [the gyro firmware notes](/reference/betafpv-gyro-firmware/).
 2. Restore from the `2026-09-17_195000_crafty_prereplace` backup.
 3. Reconnect the motors, which were disconnected during testing.
