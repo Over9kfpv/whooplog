@@ -4,7 +4,7 @@ description: The switch map, and how to read raw aux output correctly.
 lead: Resolving a boxId is the step everyone gets wrong. Byte got it wrong first, so you don't have to.
 weight: 6
 toc: true
-craft: ["Crafty", "Air65"]
+craft: ["Crafty", "Air65", "Phoenix"]
 ---
 
 The Master's switches, slot by slot. Muscle memory is sacred: every creature gets this exact
@@ -34,6 +34,28 @@ because it would have blanked the screen at the same time as selecting profile 2
 
 AUX2 carries a single 3-position switch: angle at the bottom, horizon in the middle, acro at
 the top (acro needs no mode — it is what you get when neither is active).
+
+## VTX power knob
+
+VTX power is not a mode. It is the `vtx` table, which maps ranges of one aux channel to a
+band, channel and power level. The Master's knob is **AUX6**, four steps, band and channel left
+alone (`0 0`):
+
+| Knob (AUX6) | VTX power | CLI |
+| --- | --- | --- |
+| 900–1200 | 25 mW | `vtx 0 5 0 0 1 900 1200` |
+| 1200–1500 | 100 mW | `vtx 1 5 0 0 2 1200 1500` |
+| 1500–1800 | 200 mW | `vtx 2 5 0 0 3 1500 1800` |
+| 1800–2100 | 400 mW | `vtx 3 5 0 0 4 1800 2100` |
+
+Fields are `vtx <slot> <aux channel> <band> <channel> <power> <start> <end>`, with the aux
+channel zero-indexed like `aux`. The ranges are lost on a restore that drops them, and then the
+VTX sits at `vtx_power = 1` (25 mW) and the knob does nothing: weak video, no error. Restored
+on Phoenix on 2 October.
+
+{{< callout type="warning" >}}
+Never turn the knob up without an antenna on the VTX.
+{{< /callout >}}
 
 ## Reading raw `aux` output
 
